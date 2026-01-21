@@ -126,7 +126,7 @@ function runExperiment(targetCopies: number): ExperimentResult {
 
 // Calculate probability of getting character within budget
 function calculateProbability(budget: number, targetCopies: number): void {
-  console.log(`\n🎲 Running ${EXPERIMENTS} simulations...`);
+  console.log(`\n Running ${EXPERIMENTS} simulations...`);
   
   const pullsList: number[] = [];
   const ticketsList: number[] = [];
@@ -209,7 +209,7 @@ async function getUserInput(): Promise<void> {
   
   try {
     // Get number of copies
-    const copiesInput = await question('\n📝 How many copies do you want? (1-6): ');
+    const copiesInput = await question('\n How many copies do you want? (1-6): ');
     const targetCopies = parseInt(copiesInput);
     
     if (isNaN(targetCopies) || targetCopies < 1 || targetCopies > 6) {

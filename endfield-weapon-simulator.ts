@@ -103,7 +103,7 @@ function runExperiment(targetCopies: number): ExperimentResult {
 
 // Calculate probability of getting weapon within budget
 function calculateProbability(budget: number, targetCopies: number): void {
-  console.log(`\n🎲 Running ${EXPERIMENTS} simulations...`);
+  console.log(`\n Running ${EXPERIMENTS} simulations...`);
   
   const pullsList: number[] = [];
   let successCount = 0;
@@ -135,7 +135,7 @@ function calculateProbability(budget: number, targetCopies: number): void {
   console.log("=".repeat(60));
   
   console.log(`\nYour Budget: ${budget} pulls`);
-  console.log(`✅ Success Rate: ${successCount} out of ${EXPERIMENTS} (${probability.toFixed(2)}%)`);
+  console.log(` Success Rate: ${successCount} out of ${EXPERIMENTS} (${probability.toFixed(2)}%)`);
   
   console.log("\nPULL STATISTICS:");
   console.log(`   Best case (minimum):     ${best} pulls`);
@@ -184,7 +184,7 @@ async function getUserInput(): Promise<void> {
   
   try {
     // Get number of copies
-    const copiesInput = await question('\n📝 How many weapon copies do you want? (1-6): ');
+    const copiesInput = await question('\n  How many weapon copies do you want? (1-6): ');
     const targetCopies = parseInt(copiesInput);
     
     if (isNaN(targetCopies) || targetCopies < 1 || targetCopies > 6) {
@@ -194,7 +194,7 @@ async function getUserInput(): Promise<void> {
     }
     
     // Get budget
-    const budgetInput = await question('\What is your pull budget? (e.g., 100, 300, 500): ');
+    const budgetInput = await question('\ What is your pull budget? (e.g., 100, 300, 500): ');
     const budget = parseInt(budgetInput);
     
     if (isNaN(budget) || budget < 1) {
